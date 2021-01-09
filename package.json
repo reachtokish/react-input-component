@@ -9,7 +9,8 @@
   "scripts": {
     "clean": "rm dist/bundle.js",
     "start": "parcel src/index.html",
-    "build-prod": "parcel build src/index.html"
+    "build-prod": "parcel build src/index.html",
+    "lint": "eslint ./src"
   },
   "dependencies": {
     "react": "^17.0.1",
@@ -20,6 +21,9 @@
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
     "eslint": "^7.17.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.22.0",
     "parcel-bundler": "^1.12.4",
     "sass": "^1.32.0"
