@@ -27,8 +27,8 @@ module.exports = {
     ],
     "rules": {
         // "linebreak-style": [0],
-        // "comma-dangle": ["error", "never"],
-        // "brace-style": ["error", "stroustrup"],
+        "comma-dangle": ["error", "never"],
+        "brace-style": ["error", "stroustrup"],
         "react/jsx-filename-extension": [0],
         // "react/prop-types": [0],
         // "arrow-parens": ["error", "as-needed"],
