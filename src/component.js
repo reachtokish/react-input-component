@@ -34,8 +34,6 @@ function Component({
         valueWithPrefSuf += suffix;
       }
 
-      console.log(valueWithPrefSuf);
-
       setInputVal(newVal);
       setWholeVal(valueWithPrefSuf);
     }
@@ -45,8 +43,10 @@ function Component({
   };
 
   const setOnChangeVal = (valueParam) => {
-    const valToNumber = Number(valueParam);
-    let valueWithPrefSuf = convertToLakhSeparator(valToNumber);
+    // const valToNumber = Number(valueParam);
+    const valToNumber = valueParam;
+    // let valueWithPrefSuf = convertToLakhSeparator(valToNumber);
+    let valueWithPrefSuf = valToNumber;
 
     if (prefix) {
       valueWithPrefSuf = prefix + valueWithPrefSuf;
@@ -61,7 +61,8 @@ function Component({
   };
 
   const handleOnChange = (e) => {
-    const inputValue = e.target.value.replace(/[^0-9.]/g, '');
+    const { value: inputText } = e.target;
+    const inputValue = inputText.replace(/[^0-9][.]{1}/g, '');
     setOnChangeVal(inputValue);
   };
 
